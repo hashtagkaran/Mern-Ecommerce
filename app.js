@@ -11,7 +11,8 @@ const cors = require("cors");
 
 const userRoutes = require("./routes/user");
 const authRoutes = require("./routes/auth");
-const categoryroutes = require("./routes/category");
+const categoryRoutes = require("./routes/category");
+const productRoutes = require("./routes/product");
 
 // mongoose.connect("mongodb://localhost:27017/test", {
 // 	useNewUrlParser: true,
@@ -37,7 +38,8 @@ app.use(cors());
 // routes
 app.use("/api", authRoutes);
 app.use("/api", userRoutes);
-app.use("/api", categoryroutes);
+app.use("/api", categoryRoutes);
+app.use("/api", productRoutes);
 
 const port = process.env.PORT || 8000;
 
